@@ -1,4 +1,4 @@
-function initTab() {
+(function initTab() {
   const tabMenu = document.querySelectorAll(".js-tabmenu li");
   const tabContent = document.querySelectorAll(".js-tabcontent section");
 
@@ -18,9 +18,9 @@ function initTab() {
       });
     });
   }
-}
+})();
 
-function initAccordion() {
+(function initAccordion() {
   const accordionList = document.querySelectorAll(".js-accordion dt");
 
   if (accordionList.length) {
@@ -36,7 +36,23 @@ function initAccordion() {
       item.addEventListener("click", activeAccordion);
     });
   }
-}
+})();
 
-initTab();
-initAccordion();
+(function initScrollSuave() {
+  const linksInternos = document.querySelectorAll('a[href^="#"]');
+
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+
+    section.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", scrollToSection);
+  });
+})();
