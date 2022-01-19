@@ -1,7 +1,6 @@
 export default function scrollSuave() {
-  const linksInternos = document.querySelectorAll(
-    '[data-menu="suave"] a[href^="#"]'
-  );
+  const linksInternos = Array.from(document.querySelectorAll('[data-menu="suave"] a[href^="#"]'));
+  linksInternos.pop();
 
   function scrollToSection(event) {
     event.preventDefault();
