@@ -1,3 +1,5 @@
+import outsideClick from "./outside-click.js";
+
 export default function dropdownMenu() {
   const dropdownMenus = document.querySelectorAll("[data-dropdown]");
 
@@ -9,6 +11,9 @@ export default function dropdownMenu() {
 
   function handleClick(event) {
     event.preventDefault();
-    this.classList.toggle("ativo");
+    this.classList.add("ativo");
+    outsideClick(this, ["touchstart", "click"], () => {
+      this.classList.remove("ativo");
+    });
   }
 }
