@@ -6,6 +6,7 @@ import modal from "./modules/modal.js";
 import tooltip from "./modules/tooltip.js"
 import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/mobile-menu.js";
+import initAnimaNumeros from "./modules/anima-numeros.js";
 
 scrollSuave();
 scrollAnimation();
@@ -15,3 +16,4 @@ modal();
 tooltip();
 dropdownMenu();
 menuMobile();
+initAnimaNumeros();
