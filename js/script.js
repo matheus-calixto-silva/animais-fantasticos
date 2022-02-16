@@ -8,6 +8,7 @@ import dropdownMenu from "./modules/dropdown-menu.js";
 import menuMobile from "./modules/mobile-menu.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
+import getBtcValue from './modules/fetch-btc.js'
 
 scrollSuave();
 scrollAnimation();
@@ -19,3 +20,4 @@ dropdownMenu();
 menuMobile();
 initFuncionamento();
 initFetchAnimais();
+getBtcValue();

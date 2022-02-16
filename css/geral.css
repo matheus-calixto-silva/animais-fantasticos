@@ -292,6 +292,13 @@ body {
   background: #3F4;
 }
 
+.js .btc-preco {
+  background: #3F4;
+  padding: .2rem .5rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
 @keyframes show-right {
   from {
     opacity: 0;
