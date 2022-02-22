@@ -1,7 +1,7 @@
 export default function getBtcValue() {
   async function requestBtcApi(url) {
     try {
-      const btcValue = document.querySelector(".btc-preco");
+      const btcValue = document.querySelector('.btc-preco');
       const btcJson = await (await fetch(url)).json();
 
       btcValue.innerText = Math.floor(btcJson.BRL.sell / 100000);
@@ -9,5 +9,5 @@ export default function getBtcValue() {
       console.log(error);
     }
   }
-  requestBtcApi("https://www.blockchain.com/ticker");
+  requestBtcApi('https://www.blockchain.com/ticker');
 }

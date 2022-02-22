@@ -1,7 +1,7 @@
 export default function initFuncionamento() {
-  const convertStrToArray = (str) => str.split(",").map(Number);
+  const convertStrToArray = (str) => str.split(',').map(Number);
 
-  const funcionamento = document.querySelector("[data-semana]");
+  const funcionamento = document.querySelector('[data-semana]');
   const diasSemana = convertStrToArray(funcionamento.dataset.semana);
   const horarioSemana = convertStrToArray(funcionamento.dataset.horario);
 
@@ -12,6 +12,6 @@ export default function initFuncionamento() {
   const horarioAberto = horaAgora >= horarioSemana[0] && horaAgora < horarioSemana[1];
 
   if (semanaAberto && horarioAberto) {
-    funcionamento.classList.add("aberto");
+    funcionamento.classList.add('aberto');
   }
 }

@@ -1,6 +1,6 @@
 export default function initAnimaNumeros() {
   function animaNumeros() {
-    const numeros = document.querySelectorAll("[data-numero]");
+    const numeros = document.querySelectorAll('[data-numero]');
 
     numeros.forEach((numero) => {
       const total = +numero.innerText;
@@ -25,7 +25,7 @@ export default function initAnimaNumeros() {
     }
   }
 
-  const observerTarget = document.querySelector(".numeros");
+  const observerTarget = document.querySelector('.numeros');
   const observer = new MutationObserver(handleMutation);
   observer.observe(observerTarget, { attributes: true });
 }
