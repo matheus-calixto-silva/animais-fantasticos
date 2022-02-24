@@ -10,7 +10,7 @@ import initFetchAnimais from './modules/fetch-animais.js';
 import getBtcValue from './modules/fetch-btc.js'
 import scrollAnimation from './modules/scroll-animation.js';
 
-const scrollSuave = new ScrollSuave(document.querySelectorAll('[data-menu="suave"] a[href^="#"]'));
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();

@@ -3,7 +3,7 @@ export default class ScrollSuave {
     block: 'start',
     behavior: 'smooth',
   }) {
-    this.linksInternos = Array.from(links);
+    this.linksInternos = Array.from(document.querySelectorAll(links));
     this.options = options;
 
     this.scrollToSection = this.scrollToSection.bind(this);
