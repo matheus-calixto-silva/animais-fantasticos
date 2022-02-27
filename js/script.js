@@ -9,6 +9,7 @@ import Funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fethcBtc from './modules/fetch-btc.js';
 import ScrollAnimation from './modules/scroll-animation.js';
+import SlideNav from './modules/slide.js'
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -36,6 +37,10 @@ mobileMenu.init();
 
 const funcionamento = new Funcionamento('[data-semana]', 'aberto');
 funcionamento.init();
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fethcBtc('https://www.blockchain.com/ticker', '.btc-preco');
